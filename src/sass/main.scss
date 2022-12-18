@@ -1,0 +1,69 @@
+@use "colors" as *;
+@use "media" as *;
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /*Generate Colors From Map*/
+  @include generateColors();
+
+  /*Font Families*/
+  --ff-body: 'Inter', sans-serif;
+  --ff-open-sans: 'Open Sans', sans-serif;
+  --ff-raleway: 'Raleway', sans-serif;
+
+  /* Font Weights */
+  --fw-normal: 400;
+  --fw-bold: 700;
+
+  /*Font Sizes*/
+  --fs-default: 16px;
+  --fs-2x: 2rem;
+  --fs-3x: 3rem;
+}
+
+body {
+  font-size: var(--fs-default);
+  font-family: var(--ff-body);
+}
+
+h1,h2 {
+  color: var(--clr-primary-very-dark-blue);
+  font-family: var(--ff-raleway);
+}
+
+li, a {
+  font-family: var(--ff-raleway);
+}
+
+section.middle-section {
+  background-image: url("../images/bg-curve-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: contain;
+
+  @include desktop() {
+    background-image: url("../images/bg-curve-desktop.svg");
+    background-position: top;
+  }
+
+  div:not(.card) {
+    background-color: var(--clr-neutral-light-grayish-blue);
+  }
+
+  .card div:not(.card) {
+    background-color: #fff;
+  }
+}
+
+section.newsletter {
+  background-color: var(--clr-primary-desat-blue);
+  min-height: 40vh;
+}
+
+footer {
+  background-color: var(--clr-primary-very-dark-blue);
+  min-height: 40vh;
+}

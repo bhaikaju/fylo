@@ -1,0 +1,23 @@
+/*COLOR MAP*/
+$colors: (
+        primary: (
+                very-dark-blue: hsl(243, 87%, 12%),
+                desat-blue: hsl(238, 22%, 44%)
+        ),
+        neutral: (
+                light-grayish-blue:hsl(240, 75%, 98%),
+                light-gray: hsl(0, 0%, 75%)
+        ),
+        accent: (
+                bright-blue: hsl(224, 93%, 58%),
+                moderate-cyan: hsl(170, 45%, 43%)
+        ),
+);
+
+@mixin generateColors() {
+  @each $color, $shades in $colors {
+    @each $shade, $value in $shades {
+      --clr-#{$color}-#{$shade}: #{$value};
+    }
+  }
+}

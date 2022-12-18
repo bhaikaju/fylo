@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&family=Open+Sans&family=Raleway:wght@400;700&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="sass/main.scss">
+    <title>Frontend Mentor | Fylo landing page with two column layout</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+        .attribution {
+            font-size: 11px;
+            text-align: center;
+        }
+
+        .attribution a {
+            color: hsl(228, 45%, 44%);
+        }
+    </style>
+</head>
+<body>
+<div class="wrapper mx-auto lg:max-w-[1440] lg:px-20">
+    <header class="flex justify-between p-6 lg:mt-8">
+        <img src="images/logo.svg" alt="logo" class="w-20 lg:w-40">
+        <nav>
+            <ul class="flex gap-3 text-[.8rem] lg:gap-12">
+                <li><a href="#">Features</a></li>
+                <li><a href="#">Team</a></li>
+                <li><a href="#">Sign In</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="top-section flex flex-col mt-24 p-6
+        lg:flex-row lg:p-0 lg:py-4">
+            <div class="left order-2 flex flex-col gap-12 mt-6
+            lg:order-1 lg:px-2 lg:w-2/4 lg:mt-0
+">
+                <h1 class="text-2xl text-center font-bold lg:text-start lg:text-4xl ">All your files in one secure location, accessible anywhere.</h1>
+                <p class="text-center lg:text-start">Fylo stores your most important files in one secure location.
+                    Access them wherever you need, share and collaborate with friends,
+                    family, and co-workers.</p>
+                <div class="flex flex-col items-center gap-4 lg:flex-row">
+                    <input type="text"
+                           class="px-8 py-3 border border-blue-900 rounded lg:border-gray-300"
+                           placeholder="Enter your email..">
+                    <button class="bg-blue-700 px-8 py-3 w-[100%] text-white font-bold rounded-sm hover:bg-blue-400">Get Started</button>
+                </div>
+            </div>
+            <div class="right order-1 lg:order-2 lg:w-2/4">
+                <img src="images/illustration-1.svg" alt="illustration1">
+            </div>
+        </section>
+
+        <section class="middle-section flex flex-col mt-24 lg:flex-row">
+            <div class="left order-2 p-6 lg:order-1 lg:mt-16 md:mt-16 xl:mt-32">
+                <div class="heading mt-24 mb-8 font-bold text-center text-[1.1rem]">
+                    <h2>Stay productive, wherever you are</h2>
+                </div>
+                <p class="mb-8 text-[.9rem]">Never let location be an issue when accessing your files. Fylo has you covered for all of your file storage needs.
+                </p>
+                <p class="mb-8 text-[.9rem]">
+                    Securely share files and folders with friends, family and colleagues for live collaboration. No email attachments required!
+                </p>
+                <div class="flex gap-2 justify-center items-center border border-2 border-r-0 border-t-0 border-l-0 border-b-green-600 pb-2 w-fit mx-auto">
+                    <span> See how Fylo works</span>
+                    <img src="images/icon-arrow.svg" alt="arrow">
+                </div>
+                <div class="card shadow-lg my-10 py-6 px-4 rounded-xl bg-white">
+                    <img src="images/icon-quotes.svg" alt="quotes" class="w-5">
+                    <p class="leading-7 text-[.95rem] mt-6">
+                        Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has become a well-oiled collaboration machine.
+                    </p>
+                    <div class="card-footer flex gap-2 items-center mt-6">
+                        <img src="images/avatar-testimonial.jpg" alt="avatar" class="rounded-[50%] w-2/12">
+                        <div>
+                            <span class="font-bold">Kyle Burton</span>
+                            <p class="text-[.8rem]">Founder & CEO, Huddle</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="right order-1 px-6 py-24 mt-[1.6rem] lg:order-2 lg:mt-16 xl:mt-32">
+                <img src="images/illustration-2.svg" alt="illustration2">
+            </div>
+        </section>
+        <section class="newsletter flex gap-6 flex-col p-8 items-center text-center lg:gap-12 lg:flex-row lg:py-16 lg:text-start">
+            <div class="left mt-6 text-white lg:order-1 lg:w-2/4 lg:p-4">
+                <h3 class="font-bold mb-6 lg:text-2xl">Get early access today</h3>
+                <p>It only takes a minute to sign up and our free starter tier is extremely generous.
+                    If you have any questions, our support team would be happy to help you.
+                </p>
+            </div>
+            <div class="right flex flex-col gap-3 pb-6 lg:order-2 lg:p-4 lg:w-2/4">
+              <input type="text"
+                     class="px-40 py-2 placeholder:text-gray-300 rounded-sm w-[100%] lg:block"
+                     placeholder="email@example.com">
+              <button class="bg-blue-600 px-4 py-2 text-white hover:bg-blue-400 lg:w-fit lg:px-8 lg:block lg:shadow-lg">Get Started For Free</button>
+            </div>
+        </section>
+
+    </main>
+  <footer class="p-12 text-white lg:px-8 lg:py-16 justify-start">
+    <div class="flex flex-col lg:flex-row lg:justify-around lg:items-center lg:mt-6">
+      <div class="left lg:self-start lg:py-0 lg:flex lg:flex-col">
+        <img src="images/logo-dark.svg" alt="logo-dark" class="lg:mb-5 lg:self-start">
+        <p class="flex items-center gap-4 pt-6 lg:pt-0">
+          <span><img src="images/icon-phone.svg" alt="phone"></span>
+          <span>Phone:+1-543-123-4567</span>
+        </p>
+        <p class="flex items-center gap-4 pt-6">
+          <span><img src="images/icon-email.svg" alt="phone"></span>
+          <span>example@fylo.com</span>
+        </p>
+      </div>
+      <div class="middle my-10 lg:my-0 lg:align-middle lg:py-16">
+        <ul class="flex flex-col gap-4">
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Jobs</a></li>
+          <li><a href="#">Press</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+      </div>
+      <div class="right lg:self-start lg:py-16">
+        <ul class="flex flex-col gap-4">
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Terms</a></li>
+          <li><a href="#">Privacy</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+    <p class="attribution my-6">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+        Coded by <a href="#">Programming's Fun</a>.
+    </p>
+</div>
+
+</body>
+</html>
